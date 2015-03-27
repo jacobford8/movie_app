@@ -2,7 +2,19 @@
 <p>Welcome to the Movie App</p>
 
 <p>See our collection of movies below:</p>
+
+<%= form_tag movies_path, method: 'GET' do %>
+<%= text_field_tag :q, params[:q] %>
+<%= submit_tag 'Search' %>
+<% end %> 
+
+
+
+
 <% @movies.each do |movie| %>
-<div><%= movie['title'] =%></div>
+<p><%= movie.title =%></p>
 <%end%>
+
+
+
 

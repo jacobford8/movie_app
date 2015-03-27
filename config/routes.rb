@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   #get 'movies/search'
 
   root 'movies#index'
+  #resources :controller_name, only: [:method1, :method2, :method3, :method4]
   resources :movies, only: [:new, :edit, :index, :show]
   
   # The priority is based upon order of creation: first created -> highest priority.
